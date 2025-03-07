@@ -1,0 +1,61 @@
+.select-tables-page {
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .tables-list {
+    margin-bottom: 20px;
+  }
+  
+  .table-checkboxes {
+    max-height: 300px;
+    overflow-y: scroll;
+    margin-top: 10px;
+  }
+  
+  .table-checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  

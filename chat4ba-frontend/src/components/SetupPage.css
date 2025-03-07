@@ -1,0 +1,138 @@
+/* SetupPage.css */
+
+/* General Styles */
+.setup-page {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    padding: 40px 20px;
+    margin: 0;
+    text-align: center;
+}
+
+.setup-title {
+    font-size: 36px;
+    color: #2a2a2a;
+    margin-bottom: 40px;
+}
+
+/* Section Styles */
+.setup-section {
+    margin-bottom: 50px;
+}
+
+.setup-section h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.setup-section p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Button Styles */
+button {
+    padding: 10px 20px; /* Reduced padding */
+    border: none;
+    border-radius: 8px;
+    font-size: 14px; /* Smaller text size */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Space between the logo and text */
+    text-align: center;
+    width: auto; /* Auto width based on content */
+    transition: all 0.3s ease;
+}
+
+/* Image Styling */
+.logo {
+    max-width: 18px; /* Reduced logo size */
+    height: auto;
+}
+
+/* Sample Dataset Section */
+.sample-dataset-button {
+    background-color: #f4f4f4;
+    color: #2a2a2a;
+    margin-top: 10px;
+}
+
+.sample-dataset-button:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-5px);
+}
+
+/* Boilerplate Section */
+.data-boilerplate-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjusted grid layout */
+    gap: 20px;
+    justify-items: center;
+}
+
+.boilerplate-button {
+    background-color: #f4f4f4;
+    color: #2a2a2a;
+    margin-top: 10px;
+    padding: 10px 20px; /* Reduced padding */
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.boilerplate-button:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-5px);
+}
+
+.beta {
+    background-color: #ffcc00;
+    padding: 4px 8px; /* Smaller padding for the beta tag */
+    color: #2a2a2a;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-left: 10px;
+    display: inline-block;
+}
+
+/* External Data Source Section */
+.data-source-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjusted grid layout */
+    gap: 20px;
+    justify-items: center;
+}
+
+.data-source-button {
+    background-color: #f4f4f4;
+    color: #2a2a2a;
+    margin-top: 10px;
+    padding: 10px 20px; /* Reduced padding */
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.data-source-button:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-5px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .setup-page {
+        padding: 20px;
+    }
+
+    .data-boilerplate-buttons,
+    .data-source-buttons {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
