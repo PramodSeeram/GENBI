@@ -13,9 +13,14 @@ const MySQLSetupPage = () => {
     password: "",
     databaseName: "",
   });
+<<<<<<< HEAD
   const [error, setError] = useState(""); // State for error messages
   const [loading, setLoading] = useState(false); // State to handle loading
   const [success, setSuccess] = useState(false); // State for successful connection message
+=======
+  const [tables, setTables] = useState([]); // State to store list of tables
+  const [error, setError] = useState(""); // State for error messages
+>>>>>>> 640fe20350cb6b9ac885ce044fe9324caf604ae8
 
   // Handle input changes
   const handleInputChange = (e) => {
@@ -29,6 +34,7 @@ const MySQLSetupPage = () => {
   // Handle form submission to validate MySQL connection
   const handleSubmit = async (e) => {
     e.preventDefault();
+<<<<<<< HEAD
     setLoading(true); // Show the loading spinner
     setError(""); // Clear any previous error
     setSuccess(false); // Reset success message
@@ -49,6 +55,17 @@ const MySQLSetupPage = () => {
       setError("Failed to connect to MySQL database. Please check your credentials.");
     } finally {
       setLoading(false); // Hide the loading spinner
+=======
+    try {
+      const response = await axios.post(
+        "http://127.0.0.1:8000/api/validate-mysql-connection/", // Your Django endpoint
+        mysqlCredentials
+      );
+      setTables(response.data.tables); // Store the fetched tables
+      setError(""); // Clear any previous error message
+    } catch (error) {
+      setError("Failed to connect to MySQL database. Please check your credentials.");
+>>>>>>> 640fe20350cb6b9ac885ce044fe9324caf604ae8
     }
   };
 
@@ -60,6 +77,7 @@ const MySQLSetupPage = () => {
   return (
     <div className="mysql-setup-page">
       <h1>Connect to MySQL Server</h1>
+<<<<<<< HEAD
 
       <form onSubmit={handleSubmit}>
         <label>* Display name:</label>
@@ -110,6 +128,69 @@ const MySQLSetupPage = () => {
           onChange={handleInputChange}
           required
         />
+=======
+      <form onSubmit={handleSubmit}>
+        <label>
+          * Display name:
+          <input
+            type="text"
+            name="displayName"
+            value={mysqlCredentials.displayName}
+            onChange={handleInputChange}
+            required
+          />
+        </label>
+        <label>
+          * Host:
+          <input
+            type="text"
+            name="host"
+            value={mysqlCredentials.host}
+            onChange={handleInputChange}
+            required
+          />
+        </label>
+        <label>
+          * Port:
+          <input
+            type="text"
+            name="port"
+            value={mysqlCredentials.port}
+            onChange={handleInputChange}
+            required
+          />
+        </label>
+        <label>
+          * Username:
+          <input
+            type="text"
+            name="username"
+            value={mysqlCredentials.username}
+            onChange={handleInputChange}
+            required
+          />
+        </label>
+        <label>
+          * Password:
+          <input
+            type="password"
+            name="password"
+            value={mysqlCredentials.password}
+            onChange={handleInputChange}
+            required
+          />
+        </label>
+        <label>
+          * Database name:
+          <input
+            type="text"
+            name="databaseName"
+            value={mysqlCredentials.databaseName}
+            onChange={handleInputChange}
+            required
+          />
+        </label>
+>>>>>>> 640fe20350cb6b9ac885ce044fe9324caf604ae8
         <button type="submit">Next</button>
       </form>
 
@@ -118,6 +199,7 @@ const MySQLSetupPage = () => {
       {/* Show error message if any */}
       {error && <p style={{ color: "red" }}>{error}</p>}
 
+<<<<<<< HEAD
       {/* Show loading spinner if loading is true */}
       {loading && (
         <div className="loading-spinner">
@@ -130,6 +212,17 @@ const MySQLSetupPage = () => {
       {success && !loading && (
         <div className="success-message">
           <p>Successfully connected to the MySQL database!</p>
+=======
+      {/* Display the list of tables if available */}
+      {tables.length > 0 && (
+        <div>
+          <h3>Select Tables</h3>
+          <ul>
+            {tables.map((table, index) => (
+              <li key={index}>{table}</li>
+            ))}
+          </ul>
+>>>>>>> 640fe20350cb6b9ac885ce044fe9324caf604ae8
         </div>
       )}
     </div>

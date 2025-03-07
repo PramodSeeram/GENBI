@@ -12,8 +12,13 @@ class ValidateMySQLConnectionView(APIView):
         password = request.data.get("password")
         database_name = request.data.get("databaseName")
 
+<<<<<<< HEAD
         try:
             # Attempt to connect to MySQL
+=======
+        # Attempt to connect to the MySQL database
+        try:
+>>>>>>> 640fe20350cb6b9ac885ce044fe9324caf604ae8
             connection = MySQLdb.connect(
                 host=host,
                 port=int(port),

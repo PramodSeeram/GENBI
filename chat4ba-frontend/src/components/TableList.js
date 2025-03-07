@@ -26,4 +26,8 @@ const TableList = () => {
     );
 };
 
+<<<<<<< HEAD
 export default TableList;
+=======
+export default TableList;
+>>>>>>> 640fe20350cb6b9ac885ce044fe9324caf604ae8

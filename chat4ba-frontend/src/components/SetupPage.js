@@ -17,7 +17,11 @@ const SetupPage = () => {
             {/* Start with a sample dataset */}
             <section className="setup-section">
                 <h2>Start with a sample dataset</h2>
+<<<<<<< HEAD
                 <p>At CHAT4BA, we offer sample datasets for a quick hands-on experience. Choose one to quickly start gaining insights by asking questions.</p>
+=======
+                <p>At Wren AI Cloud, we offer sample datasets for a quick hands-on experience. Choose one to quickly start gaining insights by asking questions.</p>
+>>>>>>> 640fe20350cb6b9ac885ce044fe9324caf604ae8
                 <button className="sample-dataset-button">
                     <img className="logo" src="https://img.icons8.com/ios/452/shopping-cart.png" alt="E-commerce" />
                     E-commerce
@@ -27,7 +31,11 @@ const SetupPage = () => {
             {/* Start with a data boilerplate */}
             <section className="setup-section">
                 <h2>Start with a data boilerplate</h2>
+<<<<<<< HEAD
                 <p>At CHAT4BA, we offer boilerplates with clearly defined semantics. Choose one to quickly start gaining insights by asking questions.</p>
+=======
+                <p>At Wren AI Cloud, we offer boilerplates with clearly defined semantics. Choose one to quickly start gaining insights by asking questions.</p>
+>>>>>>> 640fe20350cb6b9ac885ce044fe9324caf604ae8
                 <div className="data-boilerplate-buttons">
                     <button className="boilerplate-button">
                         <img className="logo" src="https://img.icons8.com/ios/452/hubspot.png" alt="HubSpot" />
